@@ -1,3 +1,6 @@
 function sum(m, n) {
-  // ваш код...
+  if(typeof m == 'number' && typeof n == 'number'){
+    result = m + n
+  }
+  return result
 }
