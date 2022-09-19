@@ -1,17 +1,6 @@
 function showSalary(users, age) {
-
-  let names = [];
-
-  users.forEach(element => {
-    if(element.age <= age){
-
-      let name = element.name + ', ' + element.balance;
-
-      names.push(name) 
-
-    }
-  });
-  
-  return names.join('\n');
+  //console.log(users.filter(user => user.age <= age))
+  return users.filter(user => user.age <= age).map(value => {
+    return value.name + ', ' + value.balance;
+  }).join('\n')
 }
-

@@ -1,6 +1,6 @@
 function namify(users) {
   let names = [];
-  users.forEach(element => {
+  users.map(element => {
     names.push(element.name)
   });
   return names

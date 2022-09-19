@@ -1,18 +1,9 @@
 function camelize(str) {
-
-  let words = str.split(['-']);
-  let camelWords = [];
-
-  words.forEach((value, index) => {
-
-    if(index == 0){
-      camelWords.push(value) 
+  return str.split('-').map((value, index) => {
+    if(index != 0){
+      return value[0].toUpperCase()+value.substr(1)
     }
-    else{
-    let needle = value[0];
-    let slicedStr = value.substr(1);
-    camelWords.push(needle.toUpperCase() + slicedStr)
-    }
-  });
-  return camelWords.join('')
+      return value
+  }).join('')
 }
+console.log(camelize('list-style-image'))
